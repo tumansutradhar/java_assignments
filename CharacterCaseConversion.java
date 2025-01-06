@@ -6,13 +6,14 @@ public class CharacterCaseConversion {
         System.out.print("Enter a character: ");
         char character = scanner.next().charAt(0);
         System.out.println(convertCase(character));
+        scanner.close();
     }
 
     public static String convertCase(char character) {
         if (Character.isLowerCase(character))
-            return character + "->" + Character.toUpperCase(character);
+            return character + " -> " + Character.toUpperCase(character);
         else if (Character.isUpperCase(character))
-            return character + "->" + Character.toLowerCase(character);
+            return character + " -> " + Character.toLowerCase(character);
         else
             return "Invalid Input";
     }

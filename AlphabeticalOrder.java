@@ -11,6 +11,7 @@ public class AlphabeticalOrder {
             System.out.println(ch1 + ", " + ch2);
         else
             System.out.println(ch2 + ", " + ch1);
+
         sc.close();
     }
 }

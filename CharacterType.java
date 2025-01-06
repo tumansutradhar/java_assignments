@@ -12,6 +12,7 @@ public class CharacterType {
             System.out.println("Digit");
         else
             System.out.println("Special Character");
+
         sc.close();
     }
 }

@@ -22,7 +22,10 @@ public class Main {
                 case 2 -> manager.displayStudents();
                 case 3 -> manager.searchStudentById(scanner);
                 case 4 -> manager.deleteStudent(scanner);
-                case 5 -> System.out.println("Exiting program. Goodbye!");
+                case 5 -> {
+                    System.out.println("Exiting program. Goodbye!");
+                    return;
+                }
                 default -> System.out.println("Invalid choice! Please try again.");
             }
         }

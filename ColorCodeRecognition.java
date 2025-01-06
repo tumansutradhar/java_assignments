@@ -8,6 +8,7 @@ public class ColorCodeRecognition {
         System.out.print("Enter a color code (R, B, G, O, Y, W): ");
         char colorCode = scanner.next().charAt(0);
         System.out.println(getColorName(colorCode));
+        scanner.close();
     }
 
     public static String getColorName(char colorCode) {

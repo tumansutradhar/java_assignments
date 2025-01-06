@@ -28,10 +28,9 @@ class Matrix {
 
     public void readMatrix(Scanner sc) {
         System.out.println("Enter elements of the matrix (" + rows + "x" + cols + "):");
-        for (int i = 0; i < rows; i++) {
+        for (int i = 0; i < rows; i++)
             for (int j = 0; j < cols; j++)
                 setElement(i, j, sc.nextDouble());
-        }
     }
 
     public void displayMatrix() {
@@ -49,10 +48,9 @@ class Matrix {
             return null;
         }
         Matrix result = new Matrix(rows, cols);
-        for (int i = 0; i < rows; i++) {
+        for (int i = 0; i < rows; i++)
             for (int j = 0; j < cols; j++)
                 result.setElement(i, j, getElement(i, j) + m.getElement(i, j));
-        }
         return result;
     }
 
@@ -98,12 +96,14 @@ public class MatrixOperations {
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Enter dimensions of the first matrix:");
-        int r1 = sc.nextInt(), c1 = sc.nextInt();
+        int r1 = sc.nextInt();
+        int c1 = sc.nextInt();
         Matrix m1 = new Matrix(r1, c1);
         m1.readMatrix(sc);
 
         System.out.println("Enter dimensions of the second matrix:");
-        int r2 = sc.nextInt(), c2 = sc.nextInt();
+        int r2 = sc.nextInt();
+        int c2 = sc.nextInt();
         Matrix m2 = new Matrix(r2, c2);
         m2.readMatrix(sc);
 
@@ -124,31 +124,25 @@ public class MatrixOperations {
                     if (addResult != null)
                         addResult.displayMatrix();
                 }
-
                 case 2 -> {
                     Matrix subResult = m1.subtract(m2);
                     if (subResult != null)
                         subResult.displayMatrix();
                 }
-
                 case 3 -> {
-                    Matrix mulResult = m1.multi
-                    ply(m2);
+                    Matrix mulResult = m1.multiply(m2);
                     if (mulResult != null)
                         mulResult.displayMatrix();
                 }
-
                 case 4 -> {
                     Matrix transResult = m1.transpose();
                     transResult.displayMatrix();
                 }
-
-                case 5 ->
-                    System.out.println("Exiting...");
-
+                case 5 -> System.out.println("Exiting...");
                 default -> System.out.println("Invalid choice! Try again.");
             }
         } while (choice != 5);
+
         sc.close();
     }
 }

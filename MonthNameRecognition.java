@@ -4,11 +4,13 @@ public class MonthNameRecognition {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter a month number: ");
+
         if (scanner.hasNextInt()) {
             int month = scanner.nextInt();
             System.out.println(getMonthName(month));
-        } else
+        } else {
             System.out.println("Please enter the month in numbers");
+        }
         scanner.close();
     }
 

@@ -17,13 +17,15 @@ public class InterestRate {
                 interestRate = 8.2;
             else if (age >= 59 && age <= 100)
                 interestRate = 9.2;
-        } else if (gender.equalsIgnoreCase("Male"))
+        } else if (gender.equalsIgnoreCase("Male")) {
             if (age >= 1 && age <= 58)
                 interestRate = 8.4;
             else if (age >= 59 && age <= 100)
                 interestRate = 10.5;
+        }
 
         System.out.println("The interest rate is: " + interestRate + "%");
+
         sc.close();
     }
 }
